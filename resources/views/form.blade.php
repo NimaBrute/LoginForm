@@ -28,8 +28,9 @@
 
     <h1 class="text-center mt-5">HBI</h1>
     <div class="container">
-        <form action="" class=" px-5 py-4 card shadow bg-white border-0 rounded-4 mt-3 text-secondary" method="post"
+        <form action="{{ route('form') }}" method="POST" class=" px-5 py-4 card shadow bg-white border-0 rounded-4 mt-3 text-secondary"
             style=" margin: 0 auto; width: 444px;">
+            @csrf
             <h4>دریافت اطلاعات</h4>
             <p class="mb-2">اطلاعات خود را وارد کنید</p>
             <hr>
@@ -48,8 +49,8 @@
                 <label for="checkbox1" class="form-check-lable d-block " style="font-size:14px;">ورود / ثبت نام شما به
                     معنای پذیرش <a href="#"> قوانین</a> میباشد </label>
             </div>
-            <a href="{{ url('/home') }}" class="w-100 btn btn-primary mt-3">ادامه
-            </a>
+            <button type="submit" class="w-100 btn btn-primary mt-3">ادامه
+    </button>
         </form>
     </div>
     <span style="font-size:12px" class="text-center d-block mt-3 text-secondary">همه حقوق برای HBI محفوظ است</span>
@@ -57,4 +58,27 @@
     <script src="{{ asset('js/one.js') }}"></script>
 </body>
 
-</html>
+</html> 
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>فرم ساده</title>
+</head>
+<body>
+    <h1>ارسال اطلاعات</h1>
+
+    <form action="{{ route('form') }}" method="POST">
+        @csrf
+        <label>نام:</label>
+        <input type="text" name="name" required><br><br>
+
+        <label>شماره تماس:</label>
+        <input type="text" name="phone" required><br><br>
+
+        <label>پیام:</label>
+        <textarea name="message" required></textarea><br><br>
+
+        <button type="submit">ارسال</button>
+    </form>
+</body>
+</html> -->
