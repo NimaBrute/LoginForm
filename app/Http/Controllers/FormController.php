@@ -9,6 +9,7 @@ class FormController extends Controller
         public function store(Request $request)
     {
         //نمایش اطلاعات ارسالی
-        dd($request->all());
+       $data = $request->only(['name','phone','massage']);
+       return view('result', );
     }
 }

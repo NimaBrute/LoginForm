@@ -59,26 +59,3 @@
 </body>
 
 </html> 
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>فرم ساده</title>
-</head>
-<body>
-    <h1>ارسال اطلاعات</h1>
-
-    <form action="{{ route('form') }}" method="POST">
-        @csrf
-        <label>نام:</label>
-        <input type="text" name="name" required><br><br>
-
-        <label>شماره تماس:</label>
-        <input type="text" name="phone" required><br><br>
-
-        <label>پیام:</label>
-        <textarea name="message" required></textarea><br><br>
-
-        <button type="submit">ارسال</button>
-    </form>
-</body>
-</html> -->
